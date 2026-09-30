@@ -1,0 +1,44 @@
+# This repository is for published release metadata only.
+# Android source and build projects belong in the private source repository.
+
+/source/
+/app/
+/gradle/
+gradlew
+gradlew.bat
+settings.gradle
+settings.gradle.kts
+build.gradle
+build.gradle.kts
+gradle.properties
+local.properties
+*.iml
+.idea/
+.gradle/
+**/build/
+
+# Signing material, credentials and local configuration
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+
+# Build artefacts: upload these as GitHub Release assets, not repository files
+*.apk
+*.aab
+*.apks
+*.aar
+*.jar
+*.zip
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

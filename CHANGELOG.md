@@ -1,5 +1,18 @@
 # EQ & DSP — Changelog
 
+## v1.50-beta — source build 71
+
+- Trials 200 ms EQ staging/USER restore delays in bypass, retaining fresh readback confirmation, timeouts, recovery, Loudness settling and the P²Bass ramp. Live includes, presets, Undo and A/B retain their existing transaction handling; timing still needs confirmation on the head unit.
+- Spreads Aurora and both line-style smoothing across 0–100. The previous 96-point appearance is at 80; saved values migrate by effective sample density. Keeps working decay, FFT calculations, shared bass/full-range mapping and the per-style slider positions.
+- Linked slider frequency copies now change only frequency and never replay the initiating gain drag. Gains and Q remain unchanged; a new compatible drag can edit gains.
+- Linked Drag EQ requires matching Front/Rear frequencies across all bands. Its mismatch dialog offers frequency-only copy in either direction or Cancel, and active Drag EQ is disabled if Link/frequencies become incompatible.
+- F<>R opens a direction dialog for the existing full-bank copy (frequency, Q and gain). Removes double-click direction and long-press Undo shortcuts. Both copy paths keep frequencies ordered while writing; Undo remains available.
+- Long-pressing page selectors 1 or 2 cycles backwards, matching double-click. Keeps page 3 X behavior.
+- Includes every exact band-centre sample in combined and selected EQ curves, correcting understated narrow peaks. Keeps the 48 kHz peaking-filter model and existing graph axes; physical DSP/Q matching remains unconfirmed.
+- Settings checkbox-section titles, System App/Patches/Experimental title, System title and version text follow the Text colour picker. Aligns Wipe unchecked values left and renames the highlighted button Changelog/Update.
+- Adds Download Patches below Loopback Policy. A public ZIP catalogue checks device/Android/ABI constraints and exact readable native SHA-256 signatures; unknown or unreadable files remain unverified. Always offers the read-only extractor, plus the supported system-app install/uninstall and Visualizer install/restore packages.
+- Shows each ZIP's README warnings/instructions before download, verifies ZIP size/SHA-256, and saves through Android's document picker. Downloads do not execute scripts. Packages require the compatible firmware updater trigger; the system-app package requires the owner's existing signed APK. Native scripts recheck signatures before replacement.
+
 ## v1.49-beta — source build 70
 
 - Reads the complete Changelog list from the maintained public CHANGELOG.md file.

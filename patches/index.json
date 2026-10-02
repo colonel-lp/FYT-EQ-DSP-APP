@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "packages": [
+    {
+      "id": "extractor-r2",
+      "title": "Read-only extractor r2",
+      "kind": "extractor",
+      "requirements": {
+        "execution": "Compatible FYT lsec trigger and root access; availability does not confirm execution support"
+      },
+      "file": "EQ-DSP-Read-Only-Extractor-r2.zip",
+      "sha256": "cb80440d6cead59b919a732db12ed8ab13f9bcad9ff9d21505707b2a29f25be8",
+      "size": 3470,
+      "readme": "EQ & DSP READ-ONLY EXTRACTOR r2\n\nAlways offered for collecting files when no patch matches or installation rejects signatures. This is the existing FYT lsec extraction procedure; being listed does not mean its launcher supports every unit. It requires the compatible firmware/updater trigger and root access. Unsupported units need a supported extraction method; do not run a guessed updater.\n\nUse stable vehicle power and keep the correct firmware recovery package available. These procedures use the FYT lsec updater with root/system access, not Android's APK installer. ZIP download does not run any scripts.\n\nUse a clean FAT32 USB drive. Copy the CONTENTS of ONE selected procedure folder to the USB root; never mix install, restore, uninstall or extractor launchers. Supply the compatible lsec6521update trigger from YOUR supported firmware/updater package at the USB root; it is not included. Do not substitute a trigger from another platform. Do not use firmware update images alongside these procedures. Insert USB and follow the supported unit's update procedure; do not interrupt power. Read the USB log after the reboot. A device model match alone does not establish compatibility.\n\nCopy contents of USB-EXTRACT-DSP to USB root and add your compatible trigger. Script reads build properties, system/vendor audio libraries, DSP-related APK/JAR files, configuration and service listings. It writes only its report/copied files on USB and does not replace device libraries or app files. See extract.sh for the collection list. Logs/filenames can contain identifiers or personal information: review output before manually submitting it for analysis. The app uploads no report. If extraction fails, retain the log. No system-file restore is required because extraction does not alter them.\n"
+    },
+    {
+      "id": "system-app-r1",
+      "title": "Install as System App \u2014 install / uninstall",
+      "kind": "system-app",
+      "requirements": {
+        "minSdk": 27,
+        "maxSdk": 27,
+        "models": [
+          "sp9853i_1h10_vmm",
+          "sp9853i_1h10"
+        ],
+        "abis": [
+          "x86",
+          "x86_64"
+        ],
+        "firmware": "Extracted Android 8.1 firmware; native patch requires exact four-file signatures"
+      },
+      "file": "EQ-DSP-System-App-r1.zip",
+      "sha256": "408e8f61a0b9302f0929bb50d012fd3419cd203de378fdfd4f17885809009a70",
+      "size": 5080,
+      "readme": "Install as System App r1 \u2014 INSTALL and UNINSTALL\n\nExisting supported FYT sp9853i_1h10 / sp9853i_1h10_vmm Android 8.1 (API 27) x86/x86_64 privileged-app procedures. Other units/Android 10/11 are unverified. Requires writable /system via the compatible FYT lsec updater; verified boot/read-only system/SELinux may block it. A profile match does not confirm prerequisites.\n\nUse stable vehicle power and keep the correct firmware recovery package available. These procedures use the FYT lsec updater with root/system access, not Android's APK installer. ZIP download does not run any scripts.\n\nUse a clean FAT32 USB drive. Copy the CONTENTS of ONE selected procedure folder to the USB root; never mix install, restore, uninstall or extractor launchers. Supply the compatible lsec6521update trigger from YOUR supported firmware/updater package at the USB root; it is not included. Do not substitute a trigger from another platform. Do not use firmware update images alongside these procedures. Insert USB and follow the supported unit's update procedure; do not interrupt power. Read the USB log after the reboot. A device model match alone does not establish compatibility.\n\nINSTALL: put YOUR current signed EQ & DSP APK, named EQDSP.apk, into INSTALL/eqdsp-privileged/. No APK or signing key is included. Keep the same signing key as your installed version. Copy contents of INSTALL to USB root and add your compatible trigger. Installs /system/priv-app/EQDsp/EQDSP.apk and /system/etc/permissions/privapp-permissions-com.eqdsp.controller.xml, adjusts permissions and relabels them. Updater reboots. Back up your original APK and any existing privileged copy/permission file before replacing them. Check eqdsp-privileged-install.log after reboot.\n\nUNINSTALL: copy contents of UNINSTALL to clean USB root and add compatible trigger. Removes only EQDsp/EQDspV114 privileged app folders and the EQ & DSP permission allowlist. Leaves app data/presets and unrelated native patches alone. Check eqdsp-system-uninstall.log and reboot. Install the same signed APK normally for a user app. Removal does not restore a previously overwritten privileged version: reinstall retained originals/firmware if needed. Boot failure requires your unit's firmware recovery procedure.\n"
+    },
+    {
+      "id": "visualizer4096-r1.1",
+      "title": "Visualizer 4096 r1.1 \u2014 install / restore",
+      "kind": "library",
+      "requirements": {
+        "minSdk": 27,
+        "maxSdk": 27,
+        "models": [
+          "sp9853i_1h10_vmm",
+          "sp9853i_1h10"
+        ],
+        "abis": [
+          "x86",
+          "x86_64"
+        ],
+        "firmware": "Extracted Android 8.1 firmware; native patch requires exact four-file signatures"
+      },
+      "files": [
+        {
+          "path": "/system/lib/libmedia.so",
+          "originalSha256": "2ec24e20cb42189ee8f87f9530bb23a37ebbf848289de1de4f171f907ff6bf74",
+          "patchedSha256": "ca63a0403668e62c6521185604ee7b2ab1da8811b8ab08fbc0261ccdd609bfca",
+          "size": 1017636
+        },
+        {
+          "path": "/system/lib64/libmedia.so",
+          "originalSha256": "8e425947add1ea5f79f0c5ee8ec0fd6ec6459ffe31ea8a732926c22205ed19aa",
+          "patchedSha256": "c92d15676705119b787d5301b445ab422bd261b3a54448e44e11bccdcadfe0e5",
+          "size": 1087576
+        },
+        {
+          "path": "/vendor/lib/soundfx/libvisualizer.so",
+          "originalSha256": "98e223721b75455a09b963eac5a020cb6ce2c865717adc0388afa9cd9a220714",
+          "patchedSha256": "f12e3920abd5fb64ff4f1ff8a92e73f5dfae4d5fef91a1ac5de16c41e2bed302",
+          "size": 10384
+        },
+        {
+          "path": "/vendor/lib64/soundfx/libvisualizer.so",
+          "originalSha256": "3cefb9a2ba9bf07895650ac40b0bc2bd749d6519b7a9af906bbf06b4b9e41298",
+          "patchedSha256": "c367f0a435921fb0c2dcb67b3a98198bd3cfb8285e4bc474ee20fe156f187133",
+          "size": 15120
+        }
+      ],
+      "file": "EQ-DSP-Visualizer4096-r1.1.zip",
+      "sha256": "0b79baaf0b6e55acdb7062e6fb8086a8a097dde6ba5f0b93f4dd06176423cad8",
+      "size": 2478631,
+      "readme": "Visualizer 4096 r1.1 \u2014 install and restore\n\nFor the extracted FYT sp9853i_1h10 / sp9853i_1h10_vmm x86/x86_64 Android 8.1 (API 27) firmware ONLY. Exact original or already-patched hashes of all four libraries must match PATCH-MANIFEST.json. Unknown/unreadable files are not confirmed compatible. Do not run on Android 10/11 or a different firmware signature.\n\nUse stable vehicle power and keep the correct firmware recovery package available. These procedures use the FYT lsec updater with root/system access, not Android's APK installer. ZIP download does not run any scripts.\n\nUse a clean FAT32 USB drive. Copy the CONTENTS of ONE selected procedure folder to the USB root; never mix install, restore, uninstall or extractor launchers. Supply the compatible lsec6521update trigger from YOUR supported firmware/updater package at the USB root; it is not included. Do not substitute a trigger from another platform. Do not use firmware update images alongside these procedures. Insert USB and follow the supported unit's update procedure; do not interrupt power. Read the USB log after the reboot. A device model match alone does not establish compatibility.\n\nINSTALL: copy contents of USB-INSTALL to USB root, add the correct trigger and run the supported updater. RESTORE: use USB-RESTORE instead. Scripts verify payload and device SHA-256 before writes, reject mismatches, back up originals to eqdsp-visualizer4096-backup-r1 on USB, stage replacements, verify committed files and roll back on failure. Keep the backup, original payload and restore procedure. A failed restore or boot failure needs the correct firmware recovery procedure.\n\nChanges /system/lib/libmedia.so, /system/lib64/libmedia.so and both /vendor/lib*/soundfx/libvisualizer.so. Allows opt-in waveform capture up to 4096; the advertised default remains 1024 and native FFT is guarded above 1024. The app performs its own FFT. Replacing audio libraries may prevent boot/audio if incompatible. Installer rechecks signatures at execution time, even after the app checks them. On rejection, use the read-only extractor and submit reviewed output; do not bypass checks.\n"
+    }
+  ]
+}

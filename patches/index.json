@@ -14,28 +14,6 @@
       "readme": "EQ & DSP READ-ONLY EXTRACTOR r2\n\nAlways offered for collecting files when no patch matches or installation rejects signatures. This is the existing FYT lsec extraction procedure; being listed does not mean its launcher supports every unit. It requires the compatible firmware/updater trigger and root access. Unsupported units need a supported extraction method; do not run a guessed updater.\n\nUse stable vehicle power and keep the correct firmware recovery package available. These procedures use the FYT lsec updater with root/system access, not Android's APK installer. ZIP download does not run any scripts.\n\nUse a clean FAT32 USB drive. Copy the CONTENTS of ONE selected procedure folder to the USB root; never mix install, restore, uninstall or extractor launchers. Supply the compatible lsec6521update trigger from YOUR supported firmware/updater package at the USB root; it is not included. Do not substitute a trigger from another platform. Do not use firmware update images alongside these procedures. Insert USB and follow the supported unit's update procedure; do not interrupt power. Read the USB log after the reboot. A device model match alone does not establish compatibility.\n\nCopy contents of USB-EXTRACT-DSP to USB root and add your compatible trigger. Script reads build properties, system/vendor audio libraries, DSP-related APK/JAR files, configuration and service listings. It writes only its report/copied files on USB and does not replace device libraries or app files. See extract.sh for the collection list. Logs/filenames can contain identifiers or personal information: review output before manually submitting it for analysis. The app uploads no report. If extraction fails, retain the log. No system-file restore is required because extraction does not alter them.\n"
     },
     {
-      "id": "system-app-r1",
-      "title": "Install as System App \u2014 install / uninstall",
-      "kind": "system-app",
-      "requirements": {
-        "minSdk": 27,
-        "maxSdk": 27,
-        "models": [
-          "sp9853i_1h10_vmm",
-          "sp9853i_1h10"
-        ],
-        "abis": [
-          "x86",
-          "x86_64"
-        ],
-        "firmware": "Extracted Android 8.1 firmware; native patch requires exact four-file signatures"
-      },
-      "file": "EQ-DSP-System-App-r1.zip",
-      "sha256": "408e8f61a0b9302f0929bb50d012fd3419cd203de378fdfd4f17885809009a70",
-      "size": 5080,
-      "readme": "Install as System App r1 \u2014 INSTALL and UNINSTALL\n\nExisting supported FYT sp9853i_1h10 / sp9853i_1h10_vmm Android 8.1 (API 27) x86/x86_64 privileged-app procedures. Other units/Android 10/11 are unverified. Requires writable /system via the compatible FYT lsec updater; verified boot/read-only system/SELinux may block it. A profile match does not confirm prerequisites.\n\nUse stable vehicle power and keep the correct firmware recovery package available. These procedures use the FYT lsec updater with root/system access, not Android's APK installer. ZIP download does not run any scripts.\n\nUse a clean FAT32 USB drive. Copy the CONTENTS of ONE selected procedure folder to the USB root; never mix install, restore, uninstall or extractor launchers. Supply the compatible lsec6521update trigger from YOUR supported firmware/updater package at the USB root; it is not included. Do not substitute a trigger from another platform. Do not use firmware update images alongside these procedures. Insert USB and follow the supported unit's update procedure; do not interrupt power. Read the USB log after the reboot. A device model match alone does not establish compatibility.\n\nINSTALL: put YOUR current signed EQ & DSP APK, named EQDSP.apk, into INSTALL/eqdsp-privileged/. No APK or signing key is included. Keep the same signing key as your installed version. Copy contents of INSTALL to USB root and add your compatible trigger. Installs /system/priv-app/EQDsp/EQDSP.apk and /system/etc/permissions/privapp-permissions-com.eqdsp.controller.xml, adjusts permissions and relabels them. Updater reboots. Back up your original APK and any existing privileged copy/permission file before replacing them. Check eqdsp-privileged-install.log after reboot.\n\nUNINSTALL: copy contents of UNINSTALL to clean USB root and add compatible trigger. Removes only EQDsp/EQDspV114 privileged app folders and the EQ & DSP permission allowlist. Leaves app data/presets and unrelated native patches alone. Check eqdsp-system-uninstall.log and reboot. Install the same signed APK normally for a user app. Removal does not restore a previously overwritten privileged version: reinstall retained originals/firmware if needed. Boot failure requires your unit's firmware recovery procedure.\n"
-    },
-    {
       "id": "visualizer4096-r1.1",
       "title": "Visualizer 4096 r1.1 \u2014 install / restore",
       "kind": "library",

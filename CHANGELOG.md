@@ -1,5 +1,14 @@
 # EQ & DSP — Changelog
 
+## v1.51-beta — source build 72
+
+- Saves verified patch ZIPs directly into shared Downloads, avoiding the OEM save-location picker that did not appear. Android 9 and earlier request storage permission when needed; Android 10+ use the Downloads provider. Verifies saved bytes, reports the saved filename/location, preserves existing unrelated files and offers Retry Save after a failure.
+- Suppresses the routine spectrum-start toast on activity resume so it does not obscure patch-save feedback. Capture errors and explicit capture changes retain their messages.
+- Removes system-app install/uninstall downloads from the bundled and public catalogues, and ignores those entries in older online catalogues. Retains the private installer procedures.
+- Hides the Loopback Policy dropdown while retaining its capture implementation. Renames the Settings panel to PATCHES & EXPERIMENTAL and moves Download Patches below the Visualizer controls.
+- Moves OTHER and all its checkboxes together to the bottom of the same Settings box, beneath Post-EQ modelling and Bypass Includes.
+- Removes the read-only extractor compatibility text beneath its download button; download instructions and ZIP contents remain intact.
+
 ## v1.50-beta — source build 71
 
 - Trials 200 ms EQ staging/USER restore delays in bypass, retaining fresh readback confirmation, timeouts, recovery, Loudness settling and the P²Bass ramp. Live includes, presets, Undo and A/B retain their existing transaction handling; timing still needs confirmation on the head unit.

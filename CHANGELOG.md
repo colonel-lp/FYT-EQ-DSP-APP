@@ -1,5 +1,13 @@
 # EQ & DSP — Changelog
 
+## v1.52-beta — source build 73
+
+- Bounds each bank's spectrum to one octave below its first centre and above its last, capped at 20 Hz and 20 kHz. A Rear bank spanning 25–100 Hz now displays 20–200 Hz. Excludes outside frequencies and limits colour/curve detail in narrow margins while preserving shared FFT data, smoothing and full-range Front rendering.
+- Adds a saved CHANGED INDICATOR theme colour and persistent INDICATE CHANGES option under OTHER (enabled by default). Selector dots are smaller, centred and have 12 px edge clearance. Changed included preset values use text colour; Balance/Fade handles use outlines; Level uses text only. Respects unchecked/missing preset categories, keeps Theme comparison separate and excludes Loudness.
+- Trials 100 ms for the four bypass EQ staging/USER-restore waits, retaining command order, fresh readbacks, timeouts, recovery and other ramps. Timing and audible transitions require head-unit confirmation.
+- Makes Settings right-panel buttons the System-button height. Speaker Test and Download Patches match the full System-row width; Speaker Test has 6 px vertical panel padding, the enlarged Patches panel places Download Patches 6 px above its bottom, and Visualizer controls align with System controls across viewports.
+- Reconciles the canonical Markdown user guide, documentation links and functionality records. Preserves the archived public system-app ZIP while keeping it out of the offered catalogue.
+
 ## v1.51-beta — source build 72
 
 - Saves verified patch ZIPs directly into shared Downloads, avoiding the OEM save-location picker that did not appear. Android 9 and earlier request storage permission when needed; Android 10+ use the Downloads provider. Verifies saved bytes, reports the saved filename/location, preserves existing unrelated files and offers Retry Save after a failure.
@@ -335,7 +343,7 @@
   cancels obsolete delayed restores, TA edits and SMOOTH work.
 - Displays subwoofer HPF/LPF using the same frequency labels as their sliders.
 - Writes preset updates through a temporary file and rejects rename collisions.
-- Review and test details: [Preset code review](docs/PRESET-REVIEW-v1.34.md).
+- Review and test details: [Preset code review](https://github.com/colonel-lp/Joying-EQ-DSP/blob/main/docs/functionality/PRESET-REVIEW.md).
 
 ## v1.33-beta — source build 54
 

@@ -2,6 +2,7 @@
 
 ## v1.53-beta — source build 74
 
+- Hiding EQ sliders also hides the selected-band bell curve and shading under the combined EQ curve. The combined curve remains visible when enabled; showing sliders restores those details without changing EQ values or the selected band.
 - Adds persistent P²BASS RAMPING under OTHER, unchecked by default. Manual Bass Enhancement OFF and bass-included bypass use direct preset-style target writes without temporary gain zeroing. Checking the option restores the existing 1 dB / 42 ms OFF ramp and 100 ms settling before restoring remembered gains while OFF. ON and preset replay remain direct; selected Front/Rear gains are preserved.
 - Advances bypass checks when all required fresh per-band/per-selector callbacks and values match, retaining retry polling, timeouts, cancellation and recovery. Removes redundant USER selection after stored flat USER/Q confirmation. Keeps both 100 ms Q staging waits and saved-bank proof.
 - Batches independent Bass/filter restoration after TA gates, reapplying saved targets to correct command-30 side effects before final verification. Retains filter confirmation before STANDARD/Loudness where required. Loudness uses the remaining existing 300 ms write deadline after its confirmed readback rather than adding a fixed 250 ms to late replies. The button still highlights only after complete verified bypass.

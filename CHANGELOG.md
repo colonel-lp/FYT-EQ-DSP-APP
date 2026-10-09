@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## v1.54-beta — source build 75
+
+- Corrects the false 20–22 Hz spectrum edge spike by estimating capture DC with the same Hann window used by the FFT, instead of subtracting the unweighted snapshot mean. Retains offset rejection and genuine low-bass input without an arbitrary bass cutoff.
+- Keeps the existing RMS/silence gate, FFT choices/fallbacks, smoothing, decay, spectrum styles and Post-EQ model. Finite-window spreading around 100 Hz remains expected; shorter captures still have limited low-frequency resolution.
+
 ## v1.53-beta — source build 74
 
 - Hiding EQ sliders also hides the selected-band bell curve and shading under the combined EQ curve. The combined curve remains visible when enabled; showing sliders restores those details without changing EQ values or the selected band.

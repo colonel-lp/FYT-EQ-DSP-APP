@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## v1.55-beta — source build 76
+
+- Requests fixed Android Visualizer capture gain (AS_PLAYED) to avoid automatic amplification of quiet residual input and test the suspected bass artefacts caused by changing capture gain during music.
+- Adds a session-only CAPTURE GAIN comparison in Diagnostics: FIXED versus AUTOMATIC, the previous normalized behavior. Reports the requested and actual modes, failed/unverified requests, and native peak/RMS where supported.
+- Retains 8-bit mono capture, FFT/window choices, the Hann/DC correction, smoothing and decay. Fixed gain may lose very quiet detail; the music comparison still needs head-unit confirmation.
+
 ## v1.54-beta — source build 75
 
 - Corrects the false 20–22 Hz spectrum edge spike by estimating capture DC with the same Hann window used by the FFT, instead of subtracting the unweighted snapshot mean. Retains offset rejection and genuine low-bass input without an arbitrary bass cutoff.

@@ -1,5 +1,13 @@
 # EQ & DSP — Changelog
 
+## v1.56-beta — source build 77
+
+- Adds a saved DISPLAY GAIN control after TREBLE in Visualizer settings: 0 to +12 dB, default 0, using a live dB popup. It raises all spectrum styles/banks without changing capture or audio gain, bypass, DSP presets or Undo history.
+- Adds DECAY above SMOOTH for Aurora, Line glow and Line simple, saved independently in Themes. Range 0–100 controls a 50–500 ms release; 50 keeps the previous 145 ms Aurora / 100 ms line timing. Attack remains fast; Cancel restores the previewed settings.
+- Fades curve strokes near the graph floor so zero response no longer leaves a bright line stuck at the bottom. Coordinates the display offset with silence/stale-input decay and keeps the existing spectrum bounds and bar peak hold.
+- Releases the Joying display-timeout override when the app is backgrounded while Keep Screen On remains enabled. Stops rewriting the old timeout after a background setting change, remembers the latest positive timeout for resume, and retries failed restores at most three times.
+- Gives CANCEL and SAVE CHANGES an explicit matching 10 dp gap in both preset and theme overwrite confirmations.
+
 ## v1.55-beta — source build 76
 
 - Requests fixed Android Visualizer capture gain (AS_PLAYED) to avoid automatic amplification of quiet residual input and test the suspected bass artefacts caused by changing capture gain during music.
@@ -605,3 +613,4 @@
 - OPTIONS fills the space above the restored Beta 20-style SYSTEM panel; app/version text is back at the bottom.
 - Diagnostics adds Android SHARE alongside COPY.
 - Spectrum sampling now uses a narrow, symmetric FFT RMS interpolation to reduce bin-leakage variation without frequency-dependent tilt; post-EQ calculation explicitly uses the displayed EQ bank.
+

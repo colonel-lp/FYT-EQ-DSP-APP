@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## v1.57-beta — source build 78
+
+- Long press LOUDNESS to open its themed controls; a normal tap retains ON/OFF. The firmware-specific service extension enables STOCK/CUSTOM selection, fixed depth or an editable volume curve, low/high corners and HiBoost after capability and register-readback checks.
+- Custom parameters preview live while Loudness is ON and stage while it is OFF. SAVE persists the configuration in the service; CANCEL restores the entry configuration. Parameter changes participate in Undo/history and remain excluded from DSP presets and A/B preset comparison.
+- Adds an independently saved volume cutoff: 0 disables automation, otherwise Loudness is ON below the threshold and OFF at or above it. Manual/history choices last until the next crossing. Automation waits for fresh connection state and respects locks, bypass, preset/history restoration and loudness settling.
+- The accompanying exact-firmware service patch retains stock mode on first installation, pairs custom depth with digital compensation, reapplies saved settings during DSP initialization, checks writes/readback and uses the existing hardware monitor. Its guarded USB install/restore package includes the full original APK.
+
 ## v1.56-beta — source build 77
 
 - Adds a saved DISPLAY GAIN control after TREBLE in Visualizer settings: 0 to +12 dB, default 0, using a live dB popup. It raises all spectrum styles/banks without changing capture or audio gain, bypass, DSP presets or Undo history.
@@ -613,4 +620,5 @@
 - OPTIONS fills the space above the restored Beta 20-style SYSTEM panel; app/version text is back at the bottom.
 - Diagnostics adds Android SHARE alongside COPY.
 - Spectrum sampling now uses a narrow, symmetric FFT RMS interpolation to reduce bin-leakage variation without frequency-dependent tilt; post-EQ calculation explicitly uses the displayed EQ bank.
+
 

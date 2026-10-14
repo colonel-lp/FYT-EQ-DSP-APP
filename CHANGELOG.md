@@ -1,5 +1,13 @@
 # EQ & DSP — Changelog
 
+## v1.59-beta — source build 80
+
+- Rebuilds Loudness as the requested compact three-row popup: cutoff/depth/adaptive curve, low/high/HiBoost, then preset dropdown/CANCEL/BACK. Register status appears beside LOUDNESS in smaller text. Controls use the main-page selector renderer, theme, font and 246 × 40 design size; dropdowns use the existing anchored menu.
+- Removes the MODE button and PRESET OPTIONS. STOCK is a built-in preset-list choice; editing its parameters creates CUSTOM settings. Every new or updated Loudness preset saves all parameters and cutoff, excluding ON/OFF. Existing partial files remain readable and become complete on their next save.
+- Applies and persists Loudness edits immediately, including unnamed settings. BACK, system Back and outside dismissal only exit; CANCEL restores the opening configuration, cutoff and preset reference, including after internal preset loads. Named preset file operations remain separate. Failed persistence/rollback is reported.
+- Matches the main-page PRESET name/UNSAVED display and themed changed indicator. Save As, Update, Manage, overwrite/name checks and readback/lock safeguards remain. Cutoff and curve-depth sliders use the existing dB-slider size and theme without the auto-saved text.
+- Extends Visualizer DISPLAY GAIN to 0…+24 dB in 1 dB steps, default 0. Gain remains display-only; capture normalization, audio gain, spectrum smoothing and decay are unchanged.
+
 ## v1.58-beta — source build 79
 
 - Post-EQ Loudness now follows the STOCK table or CUSTOM fixed/adaptive curve, effective service volume, corners, HiBoost, integer depth and half-dB compensation. The graph is a predicted first-order response, not measured output; Diagnostics identifies a stock/master-volume fallback when service state is unavailable.

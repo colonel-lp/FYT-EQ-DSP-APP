@@ -1,5 +1,14 @@
 # EQ & DSP — Changelog
 
+## v1.58-beta — source build 79
+
+- Post-EQ Loudness now follows the STOCK table or CUSTOM fixed/adaptive curve, effective service volume, corners, HiBoost, integer depth and half-dB compensation. The graph is a predicted first-order response, not measured output; Diagnostics identifies a stock/master-volume fallback when service state is unavailable.
+- Adds separate Loudness presets in `Download/eq-app/loudness`: Save As, Update, Load, Manage, rename/delete/view/copy, modified indication and independent save/load inclusion options. Volume cutoff is included; Loudness ON/OFF is excluded and preserved on load.
+- Uses smaller grouped Loudness controls while preserving their parameter order. Renames the adaptive editor button to ADAPTIVE CURVE.
+- Coalesces hardware register verification after volume changes while the popup is open, including physical volume controls. Closing the popup or disconnecting cancels scheduled verification.
+- Adds the uploaded Loudness r1.1 ZIP to Download Patches with customer, registered service path, signer, APK hash, API/model/ABI and ZIP-integrity checks. Updates hashes for the replaced extractor/Visualizer ZIPs and keeps a separate catalogue for older app versions.
+- Carries the confirmed CRLF customer-property fix into the canonical installer template. Service APK and uploaded patch ZIP remain unchanged.
+
 ## v1.57-beta — source build 78
 
 - Long press LOUDNESS to open its themed controls; a normal tap retains ON/OFF. The firmware-specific service extension enables STOCK/CUSTOM selection, fixed depth or an editable volume curve, low/high corners and HiBoost after capability and register-readback checks.
@@ -620,5 +629,6 @@
 - OPTIONS fills the space above the restored Beta 20-style SYSTEM panel; app/version text is back at the bottom.
 - Diagnostics adds Android SHARE alongside COPY.
 - Spectrum sampling now uses a narrow, symmetric FFT RMS interpolation to reduce bin-leakage variation without frequency-dependent tilt; post-EQ calculation explicitly uses the displayed EQ bank.
+
 
 

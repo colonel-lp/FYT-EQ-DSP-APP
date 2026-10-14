@@ -1,5 +1,16 @@
 # EQ & DSP — Changelog
 
+## v1.61-beta — source build 82
+
+- Adds service-extension r2 source for independent clean TA/rear Surround routing, preserving the existing Loudness extension. The app detects capabilities; stock/r1 units retain the Joying path and unity IIR gains are no longer labelled Surround OFF.
+- Adds DSP PROCESSING from CROSSOVER/SURROUND: front/rear HPF and sub LPF Butterworth/Linkwitz–Riley 12/24 dB/oct shapes, sub polarity and one independent sub PEQ (20–250 Hz, -12…+6 dB, Q 0.3–10). Existing frequency and sub HPF controls remain.
+- Corrects predicted HPF Q to Joying's actual Q=0.5, models named custom shapes, and retains the existing nominal DSP clock/fallback and shared crossover bypass behavior. Post-EQ remains prediction, not measurement.
+- Includes extension settings in selected preset categories, save/update/wipe, changed indication, View Values, Undo/redo/history, A/B and verified replay. Legacy files retain missing values; extension presets are guarded on unpatched services. Bypass TA also removes Surround mixing and restores its original route; independent sub processing remains independent.
+- Uses serialized service transactions, coefficient busy/readback checks, revision/profile/value guards, persisted active settings and failure rollback. Installer source accepts the exact previously installed r1 hash while retaining factory restore.
+- Carries the source-only popup corrections: cutoff/depth fit fully above their box; low/high/depth/HiBoost menus open above; line/Aurora spectra use full graph height and keep +24 dB display gain.
+- Source-only delivery. Java/service D8 and focused simulated checks do not establish head-unit sound/restart behavior. No controller/service APK or new downloadable patch ZIP generated; service build/sign/package recipes are supplied.
+
+
 ## v1.60-beta — source build 81
 
 - Corrects Loudness popup anchoring with individual button views: preset, depth, low/high corner and HiBoost menus attach directly to their own box. Header titles now use the standard dialogue title/font-scaling path, with smaller register status beside LOUDNESS.

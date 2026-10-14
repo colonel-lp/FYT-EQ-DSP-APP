@@ -1,5 +1,31 @@
 # EQ & DSP — Changelog
 
+## v1.57-beta — source build 78
+
+- Long press LOUDNESS to open its themed controls; a normal tap retains ON/OFF. The firmware-specific service extension enables STOCK/CUSTOM selection, fixed depth or an editable volume curve, low/high corners and HiBoost after capability and register-readback checks.
+- Custom parameters preview live while Loudness is ON and stage while it is OFF. SAVE persists the configuration in the service; CANCEL restores the entry configuration. Parameter changes participate in Undo/history and remain excluded from DSP presets and A/B preset comparison.
+- Adds an independently saved volume cutoff: 0 disables automation, otherwise Loudness is ON below the threshold and OFF at or above it. Manual/history choices last until the next crossing. Automation waits for fresh connection state and respects locks, bypass, preset/history restoration and loudness settling.
+- The accompanying exact-firmware service patch retains stock mode on first installation, pairs custom depth with digital compensation, reapplies saved settings during DSP initialization, checks writes/readback and uses the existing hardware monitor. Its guarded USB install/restore package includes the full original APK.
+
+## v1.56-beta — source build 77
+
+- Adds a saved DISPLAY GAIN control after TREBLE in Visualizer settings: 0 to +12 dB, default 0, using a live dB popup. It raises all spectrum styles/banks without changing capture or audio gain, bypass, DSP presets or Undo history.
+- Adds DECAY above SMOOTH for Aurora, Line glow and Line simple, saved independently in Themes. Range 0–100 controls a 50–500 ms release; 50 keeps the previous 145 ms Aurora / 100 ms line timing. Attack remains fast; Cancel restores the previewed settings.
+- Fades curve strokes near the graph floor so zero response no longer leaves a bright line stuck at the bottom. Coordinates the display offset with silence/stale-input decay and keeps the existing spectrum bounds and bar peak hold.
+- Releases the Joying display-timeout override when the app is backgrounded while Keep Screen On remains enabled. Stops rewriting the old timeout after a background setting change, remembers the latest positive timeout for resume, and retries failed restores at most three times.
+- Gives CANCEL and SAVE CHANGES an explicit matching 10 dp gap in both preset and theme overwrite confirmations.
+
+## v1.55-beta — source build 76
+
+- Requests fixed Android Visualizer capture gain (AS_PLAYED) to avoid automatic amplification of quiet residual input and test the suspected bass artefacts caused by changing capture gain during music.
+- Adds a session-only CAPTURE GAIN comparison in Diagnostics: FIXED versus AUTOMATIC, the previous normalized behavior. Reports the requested and actual modes, failed/unverified requests, and native peak/RMS where supported.
+- Retains 8-bit mono capture, FFT/window choices, the Hann/DC correction, smoothing and decay. Fixed gain may lose very quiet detail; the music comparison still needs head-unit confirmation.
+
+## v1.54-beta — source build 75
+
+- Corrects the false 20–22 Hz spectrum edge spike by estimating capture DC with the same Hann window used by the FFT, instead of subtracting the unweighted snapshot mean. Retains offset rejection and genuine low-bass input without an arbitrary bass cutoff.
+- Keeps the existing RMS/silence gate, FFT choices/fallbacks, smoothing, decay, spectrum styles and Post-EQ model. Finite-window spreading around 100 Hz remains expected; shorter captures still have limited low-frequency resolution.
+
 ## v1.53-beta — source build 74
 
 - Hiding EQ sliders also hides the selected-band bell curve and shading under the combined EQ curve. The combined curve remains visible when enabled; showing sliders restores those details without changing EQ values or the selected band.
@@ -594,3 +620,5 @@
 - OPTIONS fills the space above the restored Beta 20-style SYSTEM panel; app/version text is back at the bottom.
 - Diagnostics adds Android SHARE alongside COPY.
 - Spectrum sampling now uses a narrow, symmetric FFT RMS interpolation to reduce bin-leakage variation without frequency-dependent tilt; post-EQ calculation explicitly uses the displayed EQ bank.
+
+

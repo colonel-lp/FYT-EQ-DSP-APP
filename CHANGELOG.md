@@ -1,5 +1,13 @@
 # EQ & DSP — Changelog
 
+## v1.60-beta — source build 81
+
+- Corrects Loudness popup anchoring with individual button views: preset, depth, low/high corner and HiBoost menus attach directly to their own box. Header titles now use the standard dialogue title/font-scaling path, with smaller register status beside LOUDNESS.
+- Uses the actual main preset Save, Manage, Rename and View Values layouts for Loudness, including input frames, dimensions, spacing, selection highlighting, action states and confirmations. Stores and validation remain separate.
+- Builds the cutoff/depth popups from the same vertical-slider content as the existing dB controls, using the standard 92 × 308 scale and the appropriate volume/depth labels. Parameter edits retain their persistence and bypass safeguards.
+- Removes Loudness parameters, curve, cutoff and preset loads from global Undo/redo/history. Native Loudness ON/OFF remains included. Other history restores retain the active parameter configuration and cutoff; CANCEL keeps its separate opening-state restore.
+- Continuously compares current settings against the last loaded preset, including live configuration/cutoff updates and reopening. Pending edits stay visible; confirmed/failure readback is reconciled, and older-revision callbacks cannot replace newer state. An exact return clears UNSAVED; opening or BACK does not rebase the saved reference.
+
 ## v1.59-beta — source build 80
 
 - Rebuilds Loudness as the requested compact three-row popup: cutoff/depth/adaptive curve, low/high/HiBoost, then preset dropdown/CANCEL/BACK. Register status appears beside LOUDNESS in smaller text. Controls use the main-page selector renderer, theme, font and 246 × 40 design size; dropdowns use the existing anchored menu.

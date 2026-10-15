@@ -29,12 +29,7 @@ signing.properties
 !.env.example
 
 # Build artefacts: upload these as GitHub Release assets, not repository files
-*.apk
-*.aab
-*.apks
-*.aar
-*.jar
-*.zip
+
 
 # Editor and operating-system files
 .DS_Store

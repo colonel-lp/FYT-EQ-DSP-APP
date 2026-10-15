@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## v1.64-beta — source build 85
+
+- Makes the right-hand scrollbar in the Loudness ADAPTIVE CURVE editor directly draggable; tapping its track also moves the list. The existing horizontal depth sliders, live settings, presets and popup CANCEL/BACK behavior remain in use.
+- Recognizes the reference Processing r2 diagnostic r1 service APK. Settings → DIAGNOSTICS → COPY now decodes its supplementary startup-verification detail: failed register/coefficient check, selector/mask, tolerance and expected/actual values. The bounded raw callback remains available.
+- Supplies the already-built, matching-certificate diagnostic service and complete CHECK/INSTALL/RESTORE procedure folders in the private repository under tools/processing-r2-diagnostic-r1/. It retains the readiness guard and gathers evidence for the existing r2 startup mismatch; hardware resolution is pending. Controller 1.63 can collect the raw detail; 1.64 adds readable decoding.
+- Main controller delivery is source-only. The owner creates ZIP archives. This update adds no diagnostic archive download to the public patch catalogue.
+
 ## v1.63-beta — source build 84
 
 - Adds SERVICE PATCHES to Settings DIAGNOSTICS and its copied/shared report: separate Loudness and Processing capability detection, protocol/header evidence, customer/driver, readiness, configuration receipt and register-verification status.
@@ -675,6 +682,7 @@
 - OPTIONS fills the space above the restored Beta 20-style SYSTEM panel; app/version text is back at the bottom.
 - Diagnostics adds Android SHARE alongside COPY.
 - Spectrum sampling now uses a narrow, symmetric FFT RMS interpolation to reduce bin-leakage variation without frequency-dependent tilt; post-EQ calculation explicitly uses the displayed EQ bank.
+
 
 
 

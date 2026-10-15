@@ -1,5 +1,15 @@
 # EQ & DSP — Changelog
 
+## v1.63-beta — source build 84
+
+- Adds SERVICE PATCHES to Settings DIAGNOSTICS and its copied/shared report: separate Loudness and Processing capability detection, protocol/header evidence, customer/driver, readiness, configuration receipt and register-verification status.
+- Records bounded CAPS/CONFIG/STATE/RESULT replies, probe/read Binder-send results, reply counts and no-response status. Diagnostic capability probes do not apply settings or reset the service.
+- Reads the Package Manager service APK path/version and hashes the APK in the diagnostics worker. Recognizes the exact reference factory, Loudness r1 and Processing r2 APKs; unreadable/unknown files remain explicitly unconfirmed. On-disk identity is reported separately from running-service readiness.
+- Replaces the generic CROSSOVER patch-required message with the current detection/profile/readiness reason and a pointer to Diagnostics. Processing guards remain in place.
+- Compacts the adaptive-curve editor by removing separate/inter-slider text and endpoint labels, reducing row spacing, and retaining volume/depth inside each slider handle.
+- Selecting FIXED depth immediately applies and persists the currently displayed depth; dragging then changes that fixed value. Existing CANCEL restore, remembered adaptive curve and parameter-history rules remain.
+- Source-only diagnostic update; output filename EQ-DSP-v1.63-beta.apk. Java compilation and 16 focused reporting checks passed. No controller/service APK generated or hardware verification claimed; the installed-r2 Processing failure remains under investigation.
+
 ## v1.62-beta — source build 83
 
 - Corrects Loudness child-window ownership: cutoff, depth, low/high corner, HiBoost and preset menus attach to the visible dialogue and appear in front of it.

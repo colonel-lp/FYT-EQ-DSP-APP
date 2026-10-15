@@ -1,5 +1,14 @@
 # EQ & DSP — Changelog
 
+## v1.62-beta — source build 83
+
+- Corrects Loudness child-window ownership: cutoff, depth, low/high corner, HiBoost and preset menus attach to the visible dialogue and appear in front of it.
+- Keeps cutoff and fixed-depth popups at the standard dB slider dimensions where they fit, moving the complete slider within the visible display instead of shortening it to the space above its button.
+- Closes the previous child when another Loudness option opens, dismisses menus after selection, and closes owned menus/editors on BACK, CANCEL, system Back, outside dismissal and parent teardown.
+- Replaces adaptive-curve buttons and secondary popups with themed horizontal -15…0 dB sliders for volumes 1–36, volume/depth labels and a persistent right-hand scrollbar. Horizontal dragging edits depth; vertical swiping scrolls.
+- Retains live Loudness persistence, presets, popup-entry CANCEL restore and ON/OFF-only global Undo behavior.
+- Source-only update; build output is EQ-DSP-v1.62-beta.apk. Java compilation passed for the UI changes; version/output metadata reviewed separately. No APK generated and no head-unit appearance or gesture verification claimed.
+
 ## v1.61-beta — source build 82
 
 - Adds service-extension r2 source for independent clean TA/rear Surround routing, preserving the existing Loudness extension. The app detects capabilities; stock/r1 units retain the Joying path and unity IIR gains are no longer labelled Surround OFF.

@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## Processing r2 diagnostic r2 — service-only, 16 October 2026
+
+- Adds a bounded pre-fallback snapshot of Front/Rear HPF controls, EQ/Tone setup, shared bypass setup and coefficient I/O status to the existing mismatch report. The 64-integer raw reply fits controller 1.63.
+- Retains the original failed register/coefficient evidence, readiness guard, fallback and DSP behavior. Individual snapshot read failures are marked separately. This is diagnostic evidence collection; the Front HPF B mismatch remains unresolved.
+- Supplies the matching-certificate service APK and guarded CHECK/INSTALL/RESTORE folders under tools/processing-r2-diagnostic-r2/. Supports upgrade from the installed diagnostic r1. Main-controller version remains 1.64-beta / source build 85; no controller APK or ZIP is generated.
+
 ## v1.64-beta — source build 85
 
 - Makes the right-hand scrollbar in the Loudness ADAPTIVE CURVE editor directly draggable; tapping its track also moves the list. The existing horizontal depth sliders, live settings, presets and popup CANCEL/BACK behavior remain in use.

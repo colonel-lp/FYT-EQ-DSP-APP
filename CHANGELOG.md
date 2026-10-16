@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## 1.65-beta — 17 October 2026 (source build 86)
+
+- Add eight app-designed HPF/LPF choices, themed response/F3 selection and compact crossover, sub EQ and independent Surround controls; Front/Rear crossover group retains its OFF settings.
+- Preserve exact filter banks in presets and bypass; guard incomplete saves, retain retryable Undo/A-B restores and describe DSP changes in history.
+- Clarify installed patch versions/checksum errors and offer download-again actions; combined DSP download awaits the owner's finalized ZIP.
+- Source-only update for Processing r3 protocol 2, with guarded legacy fallback. Head-unit layout/audio acceptance remains pending.
+
 - Grouped change points by release; minor visual adjustments are combined.
 - Historical entries describe their own release. Later entries supersede earlier behavior; a source-build entry does not imply a supplied APK or hardware verification.
 - [Full pre-cleanup notes, including detailed UI changes](https://github.com/colonel-lp/FYT-EQ-DSP-APP/blob/842f51677a62313230242b46aee4f20599fcfb1a/CHANGELOG.md).

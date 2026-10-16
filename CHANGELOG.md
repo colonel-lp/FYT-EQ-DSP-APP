@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## Processing service diagnostic r3 — 16 October 2026
+
+Startup-only settling test: the new Processing verifier checks immediately, then schedules coefficient readback rechecks only after a coefficient mismatch, within a 1,500 ms window at 50 ms intervals. It releases the DSP lock while waiting and does not rewrite filters between observations. Full verification is required before readiness; persistent mismatches retain the existing fallback. Hard I/O/control-field errors are not retried as settling. Normal live adjustments, vendor EQ/Loudness/TA behavior and main-controller version/source remain unchanged.
+
+The signed service and CHECK/INSTALL/RESTORE procedures are in `tools/processing-r2-diagnostic-r3/`. Upgrade accepts the exact installed diagnostic r2. No ZIP or main-app APK is created. After reboot, allow a few seconds, then send Settings → DIAGNOSTICS → COPY. The 39-integer STG3 report retains initial/last mismatch, attempts, elapsed time and startup switch register; controller 1.63 is sufficient. Hardware confirmation remains pending.
+
+
 ## Processing r2 diagnostic r2 — service-only, 16 October 2026
 
 - Adds a bounded pre-fallback snapshot of Front/Rear HPF controls, EQ/Tone setup, shared bypass setup and coefficient I/O status to the existing mismatch report. The 64-integer raw reply fits controller 1.63.

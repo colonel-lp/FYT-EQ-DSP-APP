@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## Processing service diagnostic r4 — 16 October 2026
+
+Targets the reported live Front/Rear HPF shape verification failure after r3 made DSP PROCESSING available. The first check remains immediate. Only a changed HPF shape with an HPF coefficient mismatch gets asynchronous 50 ms readback rechecks within 1,500 ms, without filter rewrites or a fixed delay. Full verification precedes confirmation/persistence; persistent or hard failures restore the previous configuration, with bounded rollback verification if needed. Other controls retain their timing. Preset, bypass, Undo and A/B shape changes use the same guarded transaction.
+
+Adds a retained 60-integer LIV4 live-failure report, separate from startup STG3 and rollback evidence, readable through Diagnostics in controller 1.63/1.64. The signed service and minimal CHECK/INSTALL/RESTORE folders are under tools/processing-r2-diagnostic-r4/. Exact diagnostic-r3 upgrade is supported; customer 43, known hashes and actual-device backup safeguards remain. Main-controller version stays 1.64-beta / source build 85. No controller APK or ZIP is created. Physical confirmation of r4 remains pending.
+
 ## USB patch procedures — 16 October 2026
 
 Updated the existing Loudness/Processing and Visualizer procedures to carry only the payload used by each operation: APK-free CHECK, patched-only INSTALL, original-only RESTORE. Before replacement, scripts preserve the actual installed files on USB in verified hash-named snapshots without overwriting older backups. Visualizer rollback now restores the exact pre-operation files. System-app install/remove also back up existing device files, with real-shell child launchers. Extractors remain read-only and unchanged. Existing APK/library bytes and compatibility hashes are retained. Folder preparation creates no ZIPs and does not change download catalogues. The live HPF verification fix remains pending; no DSP or main-app Java/version changes were made.

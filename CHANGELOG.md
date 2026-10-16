@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## USB patch procedures — 16 October 2026
+
+Updated the existing Loudness/Processing and Visualizer procedures to carry only the payload used by each operation: APK-free CHECK, patched-only INSTALL, original-only RESTORE. Before replacement, scripts preserve the actual installed files on USB in verified hash-named snapshots without overwriting older backups. Visualizer rollback now restores the exact pre-operation files. System-app install/remove also back up existing device files, with real-shell child launchers. Extractors remain read-only and unchanged. Existing APK/library bytes and compatibility hashes are retained. Folder preparation creates no ZIPs and does not change download catalogues. The live HPF verification fix remains pending; no DSP or main-app Java/version changes were made.
+
+
 ## Processing service diagnostic r3 — 16 October 2026
 
 Startup-only settling test: the new Processing verifier checks immediately, then schedules coefficient readback rechecks only after a coefficient mismatch, within a 1,500 ms window at 50 ms intervals. It releases the DSP lock while waiting and does not rewrite filters between observations. Full verification is required before readiness; persistent mismatches retain the existing fallback. Hard I/O/control-field errors are not retried as settling. Normal live adjustments, vendor EQ/Loudness/TA behavior and main-controller version/source remain unchanged.

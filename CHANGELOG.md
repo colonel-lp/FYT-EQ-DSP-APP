@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## 1.70-beta · build 91
+
+- Spectrum: saved Hann, Blackman–Harris, Flat-top and Kaiser windows with live β control; smoother Aurora edges.
+- Capture: corrected full-chip conversion/scaling, simplified source choices and read-only live routing reports.
+- Fixes: preserve Front/Rear selection after preset restore, recognize the current service patch and retain the disabled frequency value during noise playback.
+
+
 ## 1.69-beta — 17 October 2026 (source build 90)
 
 - Add selectable spectrum sources with independent chip-band display, cached/raw signal diagnostics and clear unavailable-source reasons.

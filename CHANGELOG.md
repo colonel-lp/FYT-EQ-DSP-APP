@@ -1,5 +1,9 @@
 # EQ & DSP — Changelog
 
+## 1.72-beta · build 93
+
+- Make the Line In shortcut toggle off through AUX exit routing, with confirmed state and clear failure feedback.
+
 ## 1.71-beta · build 92
 
 - Add a themed Line In shortcut beside Amp and T, with confirmed source highlighting and equally sized Preset/Theme selectors.

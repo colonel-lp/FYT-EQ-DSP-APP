@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.71-beta · build 92
+
+- Add a themed Line In shortcut beside Amp and T, with confirmed source highlighting and equally sized Preset/Theme selectors.
+- Repair startup preset comparison and Front/Rear selection/readback; retain valid saved references and genuine change indicators.
+- Extend the read-only extractor to collect the AUX native spectrum libraries when present.
+
 ## 1.70-beta · build 91
 
 - Spectrum: saved Hann, Blackman–Harris, Flat-top and Kaiser windows with live β control; smoother Aurora edges.

@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.69-beta — 17 October 2026 (source build 90)
+
+- Add selectable spectrum sources with independent chip-band display, cached/raw signal diagnostics and clear unavailable-source reasons.
+- Add a conditional Android line-input trial; apply selected FFT sample sizes to continuous PCM capture, verify routed input and improve bounded stop/failure recovery.
+- Source-only update; full-chip bands require the separate read-only service extension. Detailed I²S/HAL return capture and on-unit acceptance remain pending.
+
 ## 1.68-beta — 17 October 2026 (source build 89)
 
 - Add selectable bass windows through 32768 samples, performance confirmation, supported-size fallback and requested/actual capture diagnostics; reuse analyser work buffers.

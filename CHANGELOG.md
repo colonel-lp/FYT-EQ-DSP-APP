@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## 1.67-beta — 17 October 2026 (source build 88)
+
+- Add independent C1–C3 crossover slots with live response/DSP editing, verified Cancel and accepted-slot storage; Undo tracks selection changes rather than custom edits.
+- Add a draggable SINE/PINK/WHITE test bar with frequency entry, logarithmic slider and level/playback controls; launch beside Speaker Test and return to the dashboard.
+- Align toolbar groups, equalize display controls, compact Lock EQ and separate Settings checkbox sections while preserving their layout.
+- Source-only update using the existing Processing r3 patch. Head-unit layout, playback/capture and hardware acceptance remain pending.
+
 ## 1.66-beta — 17 October 2026 (source build 87)
 
 - Fix crossover group OFF/ON without replaying EQ, retain filter settings, serialize live filter/Notch slider changes and allow preset recovery after failed DSP verification.

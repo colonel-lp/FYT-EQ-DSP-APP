@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## 1.68-beta — 17 October 2026 (source build 89)
+
+- Add selectable bass windows through 32768 samples, performance confirmation, supported-size fallback and requested/actual capture diagnostics; reuse analyser work buffers.
+- Source-only support: existing Visualizer r1.1 still caps capture at 4096; larger sizes need a compatible native patch. Treble remains 1024/2048.
+
 ## 1.67-beta — 17 October 2026 (source build 88)
 
 - Add independent C1–C3 crossover slots with live response/DSP editing, verified Cancel and accepted-slot storage; Undo tracks selection changes rather than custom edits.

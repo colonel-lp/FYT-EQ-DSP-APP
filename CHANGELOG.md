@@ -3,6 +3,8 @@
 ## 1.68-beta — 17 October 2026 (source build 89)
 
 - Add selectable bass windows through 32768 samples, performance confirmation, supported-size fallback and requested/actual capture diagnostics; reuse analyser work buffers.
+- Replace the floating test panel with a fixed PINK/WHITE/SINE bar below the graphs, compact frequency controls and themed playback/close symbols; fixed −6 dB output and T toggle stop playback when hidden.
+- Fit equal Preset/Theme selectors, T and BYPASS in the bottom controls; retain the Settings test-button space as an inactive placeholder.
 - Source-only support: existing Visualizer r1.1 still caps capture at 4096; larger sizes need a compatible native patch. Treble remains 1024/2048.
 
 ## 1.67-beta — 17 October 2026 (source build 88)

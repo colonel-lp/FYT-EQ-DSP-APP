@@ -2,7 +2,7 @@
 
 ## 1.66-beta — 17 October 2026 (source build 87)
 
-- Fix crossover group OFF/ON without replaying EQ, retain filter settings and allow preset recovery after failed DSP verification.
+- Fix crossover group OFF/ON without replaying EQ, retain filter settings, serialize live filter/Notch slider changes and allow preset recovery after failed DSP verification.
 - Refine crossover selector/menu, 20 Hz OFF styling and Subwoofer layout/NOTCH toggle/Q labels; isolate changed-control indicators, remove EQ bank-button change highlighting and refresh selected-bank readback.
 - Source-only update; head-unit confirmation is still required, including the intermittent Rear EQ display report.
 

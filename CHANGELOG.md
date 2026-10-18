@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## 1.74-beta · build 95
+
+- Keep presets and crossover indicators unchanged when reselecting the same named curve or returning to the preset curve.
+- Confirm named-theme updates before overwriting, matching preset updates.
+
 ## 1.73-beta · build 94
 
 - Finalize USER selection after preset/Undo/A-B restoration, then verify fresh mode and DSP values to address recurring STANDARD selection after reboot.

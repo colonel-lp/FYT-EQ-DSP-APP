@@ -1,5 +1,9 @@
 # EQ & DSP — Changelog
 
+## 1.73-beta · build 94
+
+- Finalize USER selection after preset/Undo/A-B restoration, then verify fresh mode and DSP values to address recurring STANDARD selection after reboot.
+
 ## 1.72-beta · build 93
 
 - Make the Line In shortcut toggle off through AUX exit routing, with confirmed state and clear failure feedback.

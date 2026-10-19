@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.76-beta · build 97
+
+- Correct Flat/Undo status, add history clearing and refine differential Bypass/A/B restores with native save timing preserved.
+- Serialize and verify Surround gain changes without resending unchanged processing filters.
+- Activate the Bluetooth Controls overlay shortcut with confirmed open/closed theming; add menu colours and refine graph bank labels.
+
 ## 1.75-beta · build 96
 
 - Refresh and compare DSP values before preset/A/B/Undo restores; skip unchanged settings, add Force reapply preset recovery and replace the post-bypass sync block with bounded verification.

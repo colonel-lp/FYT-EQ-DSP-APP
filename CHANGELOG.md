@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.75-beta · build 96
+
+- Refresh and compare DSP values before preset/A/B/Undo restores; skip unchanged settings, add Force reapply preset recovery and replace the post-bypass sync block with bounded verification.
+- Follow Line In with automatic Chip 16/Visualizer switching; save spectrum style with themes and contain Aurora peak glow.
+- Refine tone/Undo toolbar controls, graph bank labels, Subwoofer OFF text and Settings spacing; reveal hidden sliders before Flat and move Live Audio Probe into Diagnostics.
+
 ## 1.74-beta · build 95
 
 - Keep presets and crossover indicators unchanged when reselecting the same named curve or returning to the preset curve.

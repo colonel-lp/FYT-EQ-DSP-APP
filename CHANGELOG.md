@@ -1,5 +1,9 @@
 # EQ & DSP — Changelog
 
+## 1.77-beta · build 98
+
+- Match Bluetooth shortcut styling to Line In and toggle the floating controls open/closed, retaining audio-source release and confirmed window-state indication. Requires Bluetooth Controls 1.5.
+
 ## 1.76-beta · build 97
 
 - Correct Flat/Undo status, add history clearing and refine differential Bypass/A/B restores with native save timing preserved.

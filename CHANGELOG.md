@@ -1,5 +1,9 @@
 # EQ & DSP — Changelog
 
+## 1.78-beta · build 99
+
+- Recover the Bluetooth shortcut after the companion has been inactive; distinguish failed connections from a missing app, clean up stale bindings and retry once through its launcher.
+
 ## 1.77-beta · build 98
 
 - Match Bluetooth shortcut styling to Line In and toggle the floating controls open/closed, retaining audio-source release and confirmed window-state indication. Requires Bluetooth Controls 1.5.

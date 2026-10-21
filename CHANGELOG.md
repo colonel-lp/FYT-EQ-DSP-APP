@@ -4,7 +4,7 @@
 
 - Repair preset restore/save verification and incomplete-load recovery; harden preset file handling and remove Force Reapply.
 - Add START/STOP diagnostic logging with a five-minute limit, bounded file size and detailed restore/readback evidence.
-- Simplify preset/theme update confirmations and correct their button spacing.
+- Simplify preset/theme update confirmations and correct their button spacing; highlight the Bluetooth shortcut only for confirmed Bluetooth audio, retaining its open/close actions.
 
 ## 1.78-beta · build 99
 

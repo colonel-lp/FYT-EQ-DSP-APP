@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.79-beta · build 100
+
+- Repair preset restore/save verification and incomplete-load recovery; harden preset file handling and remove Force Reapply.
+- Add START/STOP diagnostic logging with a five-minute limit, bounded file size and detailed restore/readback evidence.
+- Simplify preset/theme update confirmations and correct their button spacing.
+
 ## 1.78-beta · build 99
 
 - Recover the Bluetooth shortcut after the companion has been inactive; distinguish failed connections from a missing app, clean up stale bindings and retry once through its launcher.

@@ -4,7 +4,8 @@
 
 - Repair preset restore/save verification and incomplete-load recovery; harden preset file handling and remove Force Reapply.
 - Add START/STOP diagnostic logging with a five-minute limit, bounded file size and detailed restore/readback evidence.
-- Simplify preset/theme update confirmations and correct their button spacing; highlight the Bluetooth shortcut only for confirmed Bluetooth audio, retaining its open/close actions.
+- Add themeable Post-EQ compensation curves following the selected Front/Rear bank and modelling includes.
+- Refine preset status, update confirmations, diagnostics and settings buttons; highlight Bluetooth only for confirmed Bluetooth audio, retaining its open/close actions.
 
 ## 1.78-beta · build 99
 

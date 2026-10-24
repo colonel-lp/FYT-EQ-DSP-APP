@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## 1.81-beta · build 102
+
+- Repair clipped confirmation/Diagnostics buttons, popup sizing and title spacing; match save fields to button height, restore colour-picker layouts and refine Copy EQ, linked-copy help, Loudness and Download Patches.
+- Correct Q and test-tone popup anchors, restore Q limit labels, align the Font menu, simplify Visualizer Gain and remove the crossover OFF-preview caption.
+- Require EQ gain drags to start on the handle without jumping; outline graph bank labels and remove the Spectrum Type selection background.
+- Add the themed Undo scrollbar and popup press feedback; keep OK/Cancel/Back borders OFF until pressed and expose Live Audio Probe at the bottom of Diagnostics.
+
 ## 1.80-beta · build 101
 
 - Standardise popup spacing, button heights and text sizes with agreed exclusions; refine EQ/filter/Loudness/theme/tone dialogs and keep slider endpoint labels clear.

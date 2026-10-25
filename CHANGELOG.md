@@ -1,5 +1,12 @@
 # EQ & DSP — Changelog
 
+## 1.82-beta · build 103
+
+- Refine Manage-width preset/theme dialogs, boxed Loudness controls, Diagnostics actions, Capture Gain settings/dropdown and larger spectrum colour pickers; enlarge EQ gain hit areas and retain 25 Undo entries.
+- Apply verified live Front EQ values when entering combined Front/Rear mode, and use a full-area Aurora mask to contain remaining glow above sharp peaks.
+- Save unused custom crossover slots in audio presets alongside active filters, and preserve app settings plus preset/theme/Loudness selections in a shared file for reinstall recovery.
+- Correct the replacement extractor ZIP checksum/size, simplify download-page instructions and add the Visualizer 32768-r1 installation README.
+
 ## 1.81-beta · build 102
 
 - Repair clipped confirmation/Diagnostics buttons, popup sizing and title spacing; match save fields to button height, restore colour-picker layouts and refine Copy EQ, linked-copy help, Loudness and Download Patches.

@@ -1,5 +1,26 @@
 # EQ & DSP — Changelog
 
+## 1.81-beta · build 102
+
+- Repair clipped confirmation/Diagnostics buttons, popup sizing and title spacing; match save fields to button height, restore colour-picker layouts and refine Copy EQ, linked-copy help, Loudness and Download Patches.
+- Correct Q and test-tone popup anchors, restore Q limit labels, align the Font menu, simplify Visualizer Gain and remove the crossover OFF-preview caption.
+- Require EQ gain drags to start on the handle without jumping; outline graph bank labels and remove the Spectrum Type selection background.
+- Add the themed Undo scrollbar and popup press feedback; keep OK/Cancel/Back borders OFF until pressed and expose Live Audio Probe at the bottom of Diagnostics.
+
+## 1.80-beta · build 101
+
+- Standardise popup spacing, button heights and text sizes with agreed exclusions; refine EQ/filter/Loudness/theme/tone dialogs and keep slider endpoint labels clear.
+- Expand opt-in diagnostic logs with readable actions, errors and Java exception evidence; summarise unchanged readbacks while retaining five-minute/2 MiB limits.
+- Make the Post-EQ curve solid, share its colour with the Post-EQ button and follow EQ CURVE visibility; move its picker into Edit Theme and correct Show/Hide EQ and Bypass OFF styling.
+- Contain Aurora trails during fast-falling peaks while retaining the curve, colours, glow and decay.
+
+## 1.79-beta · build 100
+
+- Repair preset restore/save verification and incomplete-load recovery; harden preset file handling and remove Force Reapply.
+- Add START/STOP diagnostic logging with a five-minute limit, bounded file size and detailed restore/readback evidence.
+- Add themeable Post-EQ compensation curves following the selected Front/Rear bank and modelling includes.
+- Refine preset status, update confirmations, diagnostics and settings buttons; highlight Bluetooth only for confirmed Bluetooth audio, retaining its open/close actions.
+
 ## 1.78-beta · build 99
 
 - Recover the Bluetooth shortcut after the companion has been inactive; distinguish failed connections from a missing app, clean up stale bindings and retry once through its launcher.
@@ -380,3 +401,4 @@
 - Persists main display/edit state across lifecycle recreation and adds Diagnostics SHARE.
 - Improves spectrum interpolation, active-bank Post-EQ and continuous Aurora rendering.
 - Reorganizes Settings/theme controls and EQ label alignment.
+

@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## 1.83-beta · build 104
+
+- Repair page-2 Aurora fill/glow interference when Front and Rear use different frequency ranges.
+- Reduce Aurora drawing allocations and repeated calculations, reuse separate graph masks and remove an extra fill-compositing pass; retain the curve, colours, smoothing and decay.
+
 ## 1.82-beta · build 103
 
 - Refine Manage-width preset/theme dialogs, boxed Loudness controls, Diagnostics actions, Capture Gain settings/dropdown and larger spectrum colour pickers; enlarge EQ gain hit areas and retain 25 Undo entries.

@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.84-beta · build 105
+
+- Add Aurora Lines: evenly spaced 4px vertical lines with 1px gaps, Aurora colours, and Base or Centred drawing around the graph's 0 dB line. Includes independent colour/hue/glow/decay settings, normal rise/fall response and no Wave or Smooth controls.
+- Make selected dropdown rows highlight across the full list width, including crossover type/order and current audio preset, theme and Loudness preset; retain existing text padding and row spacing.
+- Show Capture: Fixed/Auto and use BASS:, TREBLE: and GAIN: selector labels.
+
 ## 1.83-beta · build 104
 
 - Repair page-2 Aurora fill/glow interference when Front and Rear use different frequency ranges.

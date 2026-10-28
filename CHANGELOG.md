@@ -1,5 +1,10 @@
 # EQ & DSP — Changelog
 
+## 1.85-beta · build 106
+
+- Give Aurora Lines the original Aurora transparency gradient; its Glow 0–100 maps to original Aurora 25–100. Add a theme-saved 1–10px band-width slider beside the compact Axis/Centred selector, retaining 1px gaps.
+- Hide graph dB labels whenever the spectrum is visible without gain sliders. Page 3 hides both EQ and Post-EQ curves, preserving their settings when returning to pages 0–2.
+
 ## 1.84-beta · build 105
 
 - Add Aurora Lines: evenly spaced 4px vertical lines with 1px gaps, Aurora colours, and Base or Centred drawing around the graph's 0 dB line. Includes independent colour/hue/glow/decay settings, normal rise/fall response and no Wave or Smooth controls.

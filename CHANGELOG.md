@@ -1,5 +1,11 @@
 # EQ & DSP — Changelog
 
+## 1.86-beta · build 107
+
+- Let the graph expand in 3 dB steps to fit the Post-EQ curve with gain sliders hidden. Show Y-axis labels and use ±12 dB while editing. Keep the spectrum at its fixed scale.
+- Add independent theme transparency switches for horizontal grid lines, vertical grid lines and the 0 dB line.
+- Apply the Button On text colour to popup slider labels and drag-box values, and match the launcher icon size to Bluetooth Controls.
+
 ## 1.85-beta · build 106
 
 - Give Aurora Lines the original Aurora transparency gradient; its Glow 0–100 maps to original Aurora 25–100. Add a theme-saved 1–10px band-width slider beside the compact Axis/Centred selector, retaining 1px gaps.
